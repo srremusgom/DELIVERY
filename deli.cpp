@@ -2,6 +2,7 @@
 #include <string.h>
 #include<iomanip>
 using namespace std;
+//Comentario
 
 class Usuario{
     protected:
