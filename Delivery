@@ -1,2 +1,54 @@
 #include <iostream>
+#include <string.h>
 using namespace std;
+
+class Usuario{
+    protected:
+        char nombres[30];
+        char apellidos[30];
+        char telefono[10];
+        int edad;
+        int clave;//123
+    public:
+        //Usuario();
+        virtual void ingresarDatos()=0;
+        virtual void mostrarDatos()=0;
+};
+
+class Proveedor{
+    protected:
+        int codProveedor;
+        char nombreEmpresa[30];
+        char direccion[30];
+        char ruc[15];
+    public:
+        void agregarProveedor();
+        void modificarProveedor();
+        void verProveedor();
+};
+
+class Producto{
+    protected:
+        int codProducto;
+        int precioUnitario;
+        char nomProducto[20];
+        int cantExiste;
+        char categoria[20];
+    public:
+        void agregaProducto();
+        void modificarProducto();
+        void actualizarCantidad();
+        void verProducto();
+};
+
+class Servicios{
+    protected:
+        char nomServicio[30];
+        int dispExiste;
+        int pagoServicio;
+    public:
+        void agregarServicio();
+        void modificarServicio();
+        void verServicio(),
+        void actualizarDisponibilidad();
+}
