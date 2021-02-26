@@ -4,14 +4,14 @@
 CPP      = g++.exe
 CC       = gcc.exe
 WINDRES  = windres.exe
-OBJ      = main.o Usuario.o clienteBasico.o
-LINKOBJ  = main.o Usuario.o clienteBasico.o
-LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib" -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc
+OBJ      = main.o Usuario.o clienteBasico.o Proveedor.o Producto.o Servicios.o Factura.o
+LINKOBJ  = main.o Usuario.o clienteBasico.o Proveedor.o Producto.o Servicios.o Factura.o
+LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib" -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc -pg
 INCS     = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
 CXXINCS  = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
 BIN      = "Delivery Application.exe"
-CXXFLAGS = $(CXXINCS) 
-CFLAGS   = $(INCS) 
+CXXFLAGS = $(CXXINCS) -pg
+CFLAGS   = $(INCS) -pg
 RM       = rm.exe -f
 
 .PHONY: all all-before all-after clean clean-custom
@@ -32,3 +32,15 @@ Usuario.o: Usuario.cpp
 
 clienteBasico.o: clienteBasico.cpp
 	$(CPP) -c clienteBasico.cpp -o clienteBasico.o $(CXXFLAGS)
+
+Proveedor.o: Proveedor.cpp
+	$(CPP) -c Proveedor.cpp -o Proveedor.o $(CXXFLAGS)
+
+Producto.o: Producto.cpp
+	$(CPP) -c Producto.cpp -o Producto.o $(CXXFLAGS)
+
+Servicios.o: Servicios.cpp
+	$(CPP) -c Servicios.cpp -o Servicios.o $(CXXFLAGS)
+
+Factura.o: Factura.cpp
+	$(CPP) -c Factura.cpp -o Factura.o $(CXXFLAGS)

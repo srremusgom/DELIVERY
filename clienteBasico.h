@@ -1,7 +1,8 @@
 #ifndef CLIENTEBASICO_H
-#include <iostream>
 #define CLIENTEBASICO_H
+#include <iostream>
 #include "Usuario.h"
+using namespace std;
 
 class clienteBasico:Usuario
 {
@@ -15,5 +16,4 @@ class clienteBasico:Usuario
         void modificar();
         void verPedido();
 };
-
 #endif

@@ -14,6 +14,4 @@ class Usuario
         virtual void ingresarDatos()=0;
         virtual void mostrarDatos()=0;
 };
-
-
 #endif
