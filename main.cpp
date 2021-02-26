@@ -7,12 +7,8 @@ using namespace std;
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
 int main() {
+	system("CLS");
 	
-	Proveedor obj1;
-    obj1.ingresarDatos();
-    obj1.mostrarDatos();
-    obj1.modificarProveedor();
-    obj1.mostrarDatos();
-    system("PAUSE");
+	
 	return 0;
 }

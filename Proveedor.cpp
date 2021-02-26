@@ -46,7 +46,7 @@ void Proveedor::modificarProveedor(){
     cout<<"\n";
 
 		do{
-			cout<<"\tMorly: Ingrese la opcion del dato para modificar: "<<endl;
+			cout<<"\tMorly: Ingrese la opcion del dato para modificar: ";
 			cin>>op;
 			switch (op){
 				case 1:
@@ -86,7 +86,7 @@ void Proveedor::modificarProveedor(){
 void Proveedor::mostrarDatos(){
 	
 	cout<<"\tMorly: Se ha ingresado a la seccion para ver los proveedores"<<endl;
-	cout<<"\n";
+	cout<<"\n\t";
     cout<<left;
 	cout<<setw(20)<<nombres;
 	cout<<setw(20)<<apellidos;
