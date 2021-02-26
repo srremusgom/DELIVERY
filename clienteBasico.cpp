@@ -6,6 +6,7 @@ using namespace std;
 
 void clienteBasico::ingresarDatos(){
 	
+	
     cout<<"Ingrese su nombre:";
     fflush(stdin);
     gets(nombres);

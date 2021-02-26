@@ -39,3 +39,13 @@ void Producto :: modificarProducto(){
 		}
 }
 
+void Producto::verProducto()
+{
+	cout<<left;
+	cout<<setw(20)<<codProducto;
+	cout<<setw(20)<<precioUnitario;
+    cout<<setw(20)<<nomProducto;
+    cout<<setw(20)<<cantExiste;
+    cout<<setw(20)<<categoria;
+	cout<<endl;
+}
