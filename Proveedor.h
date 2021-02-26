@@ -8,6 +8,7 @@ class Proveedor:Usuario{
         char nombreEmpresa[30];
         char direccion[30];
         char ruc[15];
+        Producto* producto[30];
     public:
         void ingresarDatos();
         void mostrarDatos();
