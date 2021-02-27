@@ -32,7 +32,7 @@ void clienteBasico::ingresarDatos(){
     cout<<"\tMorly: Su cuenta ha sido registrada con exito"<<endl;
 }
 
-void clienteBasico::modificar(){
+void clienteBasico::modificarDatos(){
     int op;
     char opcion;
     

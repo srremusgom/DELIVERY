@@ -11,9 +11,8 @@ class clienteBasico:Usuario
         char direccion[30];
 	public:
 		void ingresarDatos();
-		void modificar();
+		void modificarDatos();
         void mostrarDatos();
         void realizarPedido();
-        void verPedido();
 };
 #endif

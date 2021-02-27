@@ -31,11 +31,11 @@ void Proveedor::ingresarDatos(){
     cout<<"\tMorly: El proveedor ha sido registrado con exito"<<endl;
 }
 
-void Proveedor::modificarProveedor(){
+void Proveedor::modificarDatos(){
     int op;
     char opcion;
     cout<<"\n";
-	cout<<"\tMorly: Se ha ingresado a la seccion para modificar proveedores"<<endl;
+	cout<<"\tMorly: Se ha ingresado a la seccion para modificar los datos del proveedor"<<endl;
 	cout<<"\n";
 	cout<<"\n\t1) Nombre"<<endl;
 	cout<<"\n\t2) Apellido"<<endl;

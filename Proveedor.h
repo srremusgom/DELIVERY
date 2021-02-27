@@ -12,7 +12,6 @@ class Proveedor:Usuario{
         void ingresarDatos();
         void mostrarDatos();
         void agregarProveedor();
-        void modificarProveedor();
-        void verProveedor();
+        void modificarDatos();
 };
 #endif
