@@ -13,10 +13,22 @@ int main() {
 	cout<<"\tMorly:Bienvenido!"<<endl;
 	cout<<"\tMorly:Para mejorar su experiencia en la aplicación...."<<endl;
 	cout<<"\tMorly:Y asegurar que el pedido sea de forma correcta se me asignara como su asistente...."<<endl;
-	cout<<"\tMorly:Para empezar necesito saber si se quiere registrar como administrador o cliente:"<<endl;
-	cout<<"1.Usuario Administrador"<<endl;
-	cout<<"2.Usuario Cliente"<<endl;
-	cout<<"\tMorly:Ingrese su opcion";cin>>op_tipouser;
+	cout<<"\tMorly:Empezemos..."<<endl ;
+	do{
+		cout<<"\tMorly:Necesito saber si quiere ingresar como administrador o cliente:"<<endl;
+		cout<<"\t1.Usuario Administrador"<<endl;
+		cout<<"\t2.Usuario Cliente"<<endl;
+		cout<<"\t0.Salir";
+		cout<<"\tMorly:Ingrese su opcion:";cin>>op_tipouser;
+		switch(op_tipouser){
+		case 1:
+			cout<<"\tMorly:Listo para realizar pedido:"<<endl;
+			
+			break;
+		case 2:
+			break;
+		}
+	}while(op_tipouser!=0);
 
 
 	
