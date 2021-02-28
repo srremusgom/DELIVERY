@@ -14,7 +14,6 @@ class clienteBasico:Usuario
 		void ingresarDatos();
 		void modificarDatos();
         void mostrarDatos();
-        //void realizarPedido();
-        char* getClave();
+        char* getDNI();
 };
 #endif

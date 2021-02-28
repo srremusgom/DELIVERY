@@ -8,7 +8,6 @@ class Usuario
         char apellidos[30];
         char telefono[10];
         int edad;
-        char clave[10];
 	protected:
 		Usuario();
         virtual void ingresarDatos()=0;

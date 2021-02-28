@@ -28,9 +28,6 @@ void clienteBasico::ingresarDatos(){
     cout<<"\n\tIngrese su direccion:";
     fflush(stdin);
     gets(direccion);
-    cout<<"\n\tIngrese su clave para su cuenta:";
-    fflush(stdin);
-    gets(clave);
     cout<<"\n";
     cout<<"\tMorly: Su cuenta ha sido registrada con exito"<<endl;
     nClientes++;
@@ -113,8 +110,8 @@ void clienteBasico::mostrarDatos(){
 	}	
 }*/
 
-char* clienteBasico::getClave(){
-	return clave;
+char* clienteBasico::getDNI(){
+	return dni;
 }
 		
 
