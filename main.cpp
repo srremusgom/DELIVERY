@@ -1,15 +1,20 @@
 #include <iostream>
 #include "Usuario.h"
+#include "Producto.h"
 #include "clienteBasico.h"
 #include "Proveedor.h"
 #include "Servicios.h"
 #include <string.h>
+#include <iomanip>
+
 using namespace std;
 
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
 int main() {
-	int op_tipouser;
+	Producto listofproducts[100];
+	int nproducts,nsuppliers;
+	int op_tipouser,opmenuA,op,orden=0;
 	char password[9];
 	char passwordreal[]="admin123";
 	bool check;
@@ -28,15 +33,51 @@ int main() {
 			case 1:
 				if(op_tipouser==1){
 					do{
-						cout<<"\tMorly:Para ingresar al usuario Administrador se requiere la contraseña de administradores";//admin123
+						cout<<"\tMorly:Para ingresar al usuario Administrador se requiere la clave de administradores";//admin123
 						fflush(stdin);
 						gets(password);
 						if(strcmp(password,passwordreal)==0){
-							cout<<"\tMorly:La contraseña es correcta"<<endl;
+							cout<<"\tMorly:La clave es correcta"<<endl;
 							check=true;
+							cout<<"\tMorly:Las opciones para administrador son las siguientes: ";
+							cout<<"\t1.Ingresar a la seccion de productos";
+							cout<<"\t2.Ingresar a la seccion de proveedores";
+							cout<<"\t0.Salir de la seleccion para administradores";
+							switch(op){
+								case 1:
+									do{
+										system("CLS");
+										cout<<"\n\n";
+										cout<<"\tMorly:Se presentan las opciones posibles en el apartado de productos"<<endl;
+										cout<<"\t1.Registrar producto en la aplicacion";
+										cout<<"\t2.Modificar producto en la aplicacion";
+										cout<<"\t3.Ver producto en la aplicacion";
+										cout<<"\t0.Salir del apartado productos";
+										cout<<"\tMorly:Ingrese una opcion..";
+										cin>>opmenuA;
+										switch(opmenuA){
+											case 1:
+												listofproducts[nproducts].agregaProducto();
+												if(nsuppliers!=0){
+													do{
+														system("CLS");
+														cout<<"\n\n";
+														cout<<"\tMorly:Ingrese el orden del proveedor para asignarle";
+														cin>>orden;
+													}while(nsuppliers<orden or orden==0);
+													//listofproducts[nproducts].
+												}
+											break;	
+										}
+										
+									}while(opmenuA!=0);
+									break;
+								case 2:
+									break;
+							}
 						}
 						else{
-							cout<<"\tMorly:La contraseña es incorrecta"<<endl;
+							cout<<"\tMorly:La clave es incorrecta"<<endl;
 						}
 					}while(check!=true);	
 				}
@@ -49,7 +90,7 @@ int main() {
 
 
 	
-	
+	 
 	
 	
 	system("PAUSE");
