@@ -16,7 +16,7 @@ int main() {
 	Producto listofproducts[100];
 	Proveedor listofsuppliers[50];
 	clienteBasico listofclients[50];
-	int nproducts,nsuppliers;
+	int nproducts=0,nsuppliers=0,nclients=0;
 	int op_tipouser,opmenuA,opmenuB,op,orden=0,dato_modificar/*account*/;
 	char password[9],user[10];
 	char passwordreal[]="admin123";
@@ -169,13 +169,32 @@ int main() {
 			
 							break;
 						case 2:
+							char op_modificar;
 							cout<<"\tMorly:Procederemos a crear una cuenta....";
+							listofclients[nclients].ingresarDatos();
+							nclients++;
+						
+							/*cout<<"\tMorly:Si se ha equivocado en algun dato al momento de registrarse...";
+							cout<<"\tMorly:Digite [S], de lo contrario presione cualquier tecla";
+							cin>>op_modificar;
+							if(op_modificar==S){
+								do{
+									cout<<"\tMorly:Se mostrara los datos de los clientes registrados hasta el momento";
+									cout<<"\tMorly:Ingrese el numero de orden del clientes para modificar:";
+									cin>>dato_modificar;
+								}while(nproducts<dato_modificar or dato_modificar==0);
+								
+								listofclients[dato_modificar-1].modificarDatos();
+								cout<<"\tMorly:El cliente ha sido modificado con exito";*/
+								
 							break;
 					}
+
+				}while(account!=0);
 	
 				break;
-				}while(account!=0);
 		}
+		
 	}while(op_tipouser!=0);
 
 

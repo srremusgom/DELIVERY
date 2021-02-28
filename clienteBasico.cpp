@@ -95,7 +95,7 @@ void clienteBasico::mostrarDatos(){
 	cout<<endl;	
 }
 
-void clienteBasico::realizarPedido(){
+/*void clienteBasico::realizarPedido(){
 	int op_solicitar;
 	cout<<"\tMorly:¿Desea solicitar productos o servicios?";
 	cout<<"\t1.Solicitar producto"<<endl;
@@ -111,7 +111,7 @@ void clienteBasico::realizarPedido(){
 		case 2:
 			break;
 	}	
-}
+}*/
 
 char* clienteBasico::getClave(){
 	return clave;
