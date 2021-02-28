@@ -6,6 +6,5 @@ Usuario :: Usuario(){
 	strcpy(apellidos,"(sin apellidos)");
 	strcpy(telefono,"(sin telefono)");
 	edad=0;
-	clave=0;
 }
 

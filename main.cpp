@@ -159,14 +159,32 @@ int main() {
 					cin>>account;
 					switch(account){
 						case 1:
+							char* variable;
 							cout<<"\tMorly:Ingrese el nombre el cual se registro para comprobar si la cuenta existe";
 							fflush(stdin);
 							gets(user);
 							//comprobarcuenta(user);
-							//if(){
-								
+							//if(){	
 							//}
-			
+							int pos;
+							/*for(int i=0;i<nclients;i++){
+								variable=listofclients[i].getDNI();
+							}*/
+							cout<<"dni";
+							
+							/*for(int i=0;i<nclients;i++){
+								
+								if(strcmp(listofclients[i].getDNI(),variable)==0){
+										pos=i+1;
+								}
+								if(listofclients[i].getDNI()==variable){
+										pos=i+1;
+								}
+							}*/
+							pos=5;
+							cout<<pos;
+							
+							system("PAUSE");
 							break;
 						case 2:
 							char op_modificar;
@@ -197,11 +215,6 @@ int main() {
 		
 	}while(op_tipouser!=0);
 
-
-	
-	 
-	
-	
 	system("PAUSE");
 	return 0;
 }
