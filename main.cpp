@@ -13,8 +13,9 @@ using namespace std;
 
 int main() {
 	Producto listofproducts[100];
+	Proveedor listofsuppliers[50];
 	int nproducts,nsuppliers;
-	int op_tipouser,opmenuA,op,orden=0;
+	int op_tipouser,opmenuA,opmenuB,op,orden=0,dato_modificar;
 	char password[9];
 	char passwordreal[]="admin123";
 	bool check;
@@ -43,6 +44,7 @@ int main() {
 							cout<<"\t1.Ingresar a la seccion de productos";
 							cout<<"\t2.Ingresar a la seccion de proveedores";
 							cout<<"\t0.Salir de la seleccion para administradores";
+							cin>>op;
 							switch(op){
 								case 1:
 									do{
@@ -58,21 +60,81 @@ int main() {
 										switch(opmenuA){
 											case 1:
 												listofproducts[nproducts].agregaProducto();
-												if(nsuppliers!=0){
+												//if(nsuppliers!=0){
 													do{
 														system("CLS");
 														cout<<"\n\n";
 														cout<<"\tMorly:Ingrese el orden del proveedor para asignarle";
 														cin>>orden;
 													}while(nsuppliers<orden or orden==0);
-													//listofproducts[nproducts].
-												}
-											break;	
-										}
-										
+													listofproducts[nproducts].asignarProveedor(&listofsuppliers[orden-1]);
+													listofsuppliers[orden-1].agregarProducto(&listofproducts[nproducts]);
+													nproducts++;
+													cout<<"\tMorly:El producto ha sido registrado con exito";
+												//}
+												break;
+											case 2:
+												//if(nproducts!=0){
+													do{
+														cout<<"\tMorly:Se mostrara los datos de los productos registrados hasta el momento";
+														cout<<"\tMorly:Ingrese el numero de orden del producto para modificar:";
+														cin>>dato_modificar;
+													}while(nproducts<dato_modificar or dato_modificar==0);
+													listofproducts[dato_modificar-1].modificarProducto();
+													cout<<"\tMorly:El producto ha sido modificado con exito";
+												//}
+												break;
+											case 3:
+												//ver
+												break;
+											case 0:
+												cout<<"\tMorly:Regresando...";		
+												break;
+											default:
+												cout<<"\tMorly:La opcion ingresada no se encuentra en el menu";
+												break;
+										}	
 									}while(opmenuA!=0);
 									break;
 								case 2:
+									do{
+										system("CLS");
+										cout<<"\n\n";
+										cout<<"\tMorly:Se presentan las opciones posibles en el apartado de productos"<<endl;
+										cout<<"\t1.Registrar proveedor en la aplicacion";
+										cout<<"\t2.Modificar proveedor en la aplicacion";
+										cout<<"\t3.Ver proveedores en la aplicacion";
+										cout<<"\t0.Salir del apartado proveedores";
+										cout<<"\tMorly:Ingrese una opcion..";
+										cin>>opmenuA;
+										switch(opmenuB){
+											case 1:
+												listofsuppliers[nsuppliers].ingresarDatos();
+												nsuppliers++;
+												system("PAUSE");
+												break;
+											case 2:
+												//if(nsuppliers!=0){
+													do{
+														cout<<"\tMorly:Se mostrara los datos de los proveedores registrados hasta el momento";
+														cout<<"\tMorly:Ingrese el numero de orden del proveedor para modificar:";
+														cin>>dato_modificar;
+													}while(nsuppliers<dato_modificar or dato_modificar==0);
+													listofsuppliers[dato_modificar-1].modificarDatos();
+													cout<<"\tMorly:El proveedor ha sido modificado con exito";
+												//}
+												break;
+											case 3:
+												//ver
+												break;
+											case 0:
+												cout<<"\tMorly:Regresando...";		
+												break;
+											default:
+												cout<<"\tMorly:La opcion ingresada no se encuentra en el menu";
+												break;
+										}	
+									}while(opmenuB!=0);
 									break;
 							}
 						}
@@ -84,6 +146,8 @@ int main() {
 				
 				break;
 			case 2:
+				
+				
 				break;
 		}
 	}while(op_tipouser!=0);

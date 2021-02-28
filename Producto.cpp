@@ -49,3 +49,7 @@ void Producto::verProducto()
     cout<<setw(20)<<categoria;
 	cout<<endl;
 }
+
+void Producto::asignarProveedor(Proveedor *prove){
+	proveedor=prove;
+}

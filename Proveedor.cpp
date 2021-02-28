@@ -96,3 +96,9 @@ void Proveedor::mostrarDatos(){
 	cout<<setw(20)<<ruc;
 	cout<<endl;
 }
+
+void Proveedor::agregarProducto(Producto* p){
+	producto[nProductos]=p;
+	nProductos++;
+}
+
