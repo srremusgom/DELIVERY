@@ -4,6 +4,7 @@
 #include "clienteBasico.h"
 #include "Proveedor.h"
 #include "Servicios.h"
+#include "buscador.h"
 #include <string.h>
 #include <iomanip>
 
@@ -14,9 +15,10 @@ using namespace std;
 int main() {
 	Producto listofproducts[100];
 	Proveedor listofsuppliers[50];
+	clienteBasico listofclients[50];
 	int nproducts,nsuppliers;
-	int op_tipouser,opmenuA,opmenuB,op,orden=0,dato_modificar;
-	char password[9];
+	int op_tipouser,opmenuA,opmenuB,op,orden=0,dato_modificar/*account*/;
+	char password[9],user[10];
 	char passwordreal[]="admin123";
 	bool check;
 	system("CLS");
@@ -146,9 +148,33 @@ int main() {
 				
 				break;
 			case 2:
-				
-				
+				int account;
+				do{
+					system("CLS");
+					cout<<"\n\n";
+					cout<<"\tMorly:Listo para hacer su pedido?";
+					cout<<"\tMorly:Antes de realizar su pedido necesito saber si ya tiene una cuenta registrada en nuestra aplicacom";
+					cout<<"Ingrese 1:Si, tengo una cuenta registrada";
+					cout<<"Ingrese 2:No, recien me descargue la aplicacion";
+					cin>>account;
+					switch(account){
+						case 1:
+							cout<<"\tMorly:Ingrese el nombre el cual se registro para comprobar si la cuenta existe";
+							fflush(stdin);
+							gets(user);
+							//comprobarcuenta(user);
+							//if(){
+								
+							//}
+			
+							break;
+						case 2:
+							cout<<"\tMorly:Procederemos a crear una cuenta....";
+							break;
+					}
+	
 				break;
+				}while(account!=0);
 		}
 	}while(op_tipouser!=0);
 
