@@ -92,23 +92,6 @@ void clienteBasico::mostrarDatos(){
 	cout<<endl;	
 }
 
-/*void clienteBasico::realizarPedido(){
-	int op_solicitar;
-	cout<<"\tMorly:¿Desea solicitar productos o servicios?";
-	cout<<"\t1.Solicitar producto"<<endl;
-	cout<<"\t2.Solicitar servicio"<<endl;
-	cout<<"\t3.Regresar"<<endl;
-	cout<<"\tMorly:Digite su opcion";
-	cin>>op_solicitar;
-	
-	switch(op_solicitar){
-		case 1:
-			
-			break;
-		case 2:
-			break;
-	}	
-}*/
 
 char* clienteBasico::getDNI(){
 	return dni;

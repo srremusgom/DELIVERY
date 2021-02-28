@@ -141,7 +141,7 @@ OverrideBuildCmd=0
 BuildCmd=
 
 [Unit12]
-FileName=Factura.h
+FileName=ordenador.h
 CompileCpp=1
 Folder=
 Compile=1
@@ -151,7 +151,7 @@ OverrideBuildCmd=0
 BuildCmd=
 
 [Unit13]
-FileName=Factura.cpp
+FileName=Pedido.h
 CompileCpp=1
 Folder=
 Compile=1
@@ -181,7 +181,7 @@ OverrideBuildCmd=0
 BuildCmd=
 
 [Unit14]
-FileName=ordenador.h
+FileName=Pedido.cpp
 CompileCpp=1
 Folder=
 Compile=1

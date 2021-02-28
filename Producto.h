@@ -1,6 +1,8 @@
 #ifndef PRODUCTO_H
 #define PRODUCTO_H
 #include "Proveedor.h"
+#include "Pedido.h"
+
 class Proveedor;
 class Producto{
     protected:
@@ -9,7 +11,8 @@ class Producto{
         char nomProducto[20];
         int cantExiste;
         char categoria[20];
-        Proveedor* proveedor;
+        Proveedor* proveedor=NULL;
+        Pedido* pedidos[50];
     public:
         void agregaProducto();
         void modificarProducto();
