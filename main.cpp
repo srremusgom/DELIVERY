@@ -24,26 +24,31 @@ int main() {
 	char passwordreal[]="admin123";
 	bool check;
 	system("CLS");
-	cout<<"\tMorly:Bienvenido!"<<endl;
-	cout<<"\tMorly:Para mejorar su experiencia en la aplicación...."<<endl;
+	cout<<"\n\n\tMorly:Bienvenido!"<<endl;
+	cout<<"\tMorly:Para mejorar su experiencia en la aplicacion...."<<endl;
 	cout<<"\tMorly:Y asegurar que el pedido sea de forma correcta se me asignara como su asistente...."<<endl;
 	cout<<"\tMorly:Empezemos..."<<endl ;
 	do{
-		cout<<"\tMorly:Necesito saber si quiere ingresar como administrador o cliente:"<<endl;
-		cout<<"\t1.Usuario Administrador"<<endl;
-		cout<<"\t2.Usuario Cliente"<<endl;
-		cout<<"\t0.Salir";
-		cout<<"\tMorly:Ingrese su opcion:";cin>>op_tipouser;
+		cout<<"\tMorly:Necesito saber si quiere ingresar como administrador o cliente"<<endl;cout<<"\n";
+		cout<<"\t\t1.Usuario Administrador"<<endl;
+		cout<<"\t\t2.Usuario Cliente"<<endl;
+		cout<<"\t\t0.Salir";
+		cout<<"\n\n";
+		cout<<"\tMorly:Ingrese su opcion--->";cin>>op_tipouser;
 		switch(op_tipouser){
 			case 1:
+				system("CLS");
+				cout<<"\n\n";
 				if(op_tipouser==1){
 					do{
-						cout<<"\tMorly:Para ingresar al usuario Administrador se requiere la clave de administradores";//admin123
+						cout<<"\tMorly:Para ingresar al usuario Administrador se requiere la clave de administradores!!"<<endl;//admin123
+						cout<<"\n\tMorly:Ingrese la clave--->";
 						fflush(stdin);
 						gets(password);
 						if(strcmp(password,passwordreal)==0){
-							cout<<"\tMorly:La clave es correcta"<<endl;
+							cout<<"\n\tMorly:En hora buena!.La clave es correcta"<<endl;
 							check=true;
+							system("CLS");
 							cout<<"\tMorly:Las opciones para administrador son las siguientes: ";
 							cout<<"\t1.Ingresar a la seccion de productos";
 							cout<<"\t2.Ingresar a la seccion de proveedores";
@@ -207,7 +212,7 @@ int main() {
                                     	cout<<"\n\n"<<"\t"<<"Ingrese su eleccion: ";cin>>op_agregar;
                                     	nS++;
 									}while(nS<=20 && op_agregar!='N');
-																	
+									norders++;			
 									break;
 									
 								case 2:

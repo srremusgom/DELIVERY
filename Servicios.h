@@ -3,8 +3,8 @@
 class Pedido;
 class Servicios{
     protected:
-        char nomServicio[3][30];
-        int pagoServicio[3];
+        char nomServicio[50][30];
+        int pagoServicio[50];
         int nServicios;
         char oficio[20];
         Pedido* pedido[50];
