@@ -49,10 +49,13 @@ int main() {
 							cout<<"\n\tMorly:En hora buena!.La clave es correcta"<<endl;
 							check=true;
 							system("CLS");
-							cout<<"\tMorly:Las opciones para administrador son las siguientes: ";
-							cout<<"\t1.Ingresar a la seccion de productos";
-							cout<<"\t2.Ingresar a la seccion de proveedores";
-							cout<<"\t0.Salir de la seleccion para administradores";
+							cout<<"\n\n";
+							cout<<"\tMorly:Las opciones para administrador son las siguientes: "<<endl;
+							cout<<"\n";
+							cout<<"\t\t1.Ingresar a la seccion de productos"<<endl;
+							cout<<"\t\t2.Ingresar a la seccion de proveedores"<<endl;
+							cout<<"\t\t0.Salir de la seleccion para administradores"<<endl;
+							cout<<"\n\tMorly:Ingrese su opcion--->";
 							cin>>op;
 							switch(op){
 								case 1:
@@ -60,14 +63,15 @@ int main() {
 										system("CLS");
 										cout<<"\n\n";
 										cout<<"\tMorly:Se presentan las opciones posibles en el apartado de productos"<<endl;
-										cout<<"\t1.Registrar producto en la aplicacion";
-										cout<<"\t2.Modificar producto en la aplicacion";
-										cout<<"\t3.Ver producto en la aplicacion";
-										cout<<"\t0.Salir del apartado productos";
-										cout<<"\tMorly:Ingrese una opcion..";
-										cin>>opmenuA;
+										cout<<"\n";
+										cout<<"\t\t1.Registrar producto en la aplicacion"<<endl;
+										cout<<"\t\t2.Modificar producto en la aplicacion"<<endl;
+										cout<<"\t\t3.Ver producto en la aplicacion"<<endl;
+										cout<<"\t\t0.Salir del apartado productos"<<endl;
+										cout<<"\n\tMorly:Ingrese su opcion--->";cin>>opmenuA;
 										switch(opmenuA){
 											case 1:
+												system("CLS");
 												listofproducts[nproducts].agregaProducto();
 												//if(nsuppliers!=0){
 													do{

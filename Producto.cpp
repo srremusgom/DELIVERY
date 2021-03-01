@@ -4,10 +4,13 @@
 #include <iomanip>
 using namespace std;
 void Producto :: agregaProducto(){
-	cout<<"Ingrese el Nombre del Producto : "; fflush(stdin); cin.getline(nomProducto,20,'\n');
-	cout<<"Ingrese la cantidad existente : "; cin>>cantExiste;
-	cout<<"Ingrese la categoria : "; fflush(stdin); cin.getline(categoria,20,'\n');
-	cout<<"Ingrese el precio unitario : "; cin>>precioUnitario;
+	cout<<"\n\n";
+	cout<<"\tMorly:En este apartado puede complete los datos para registrar el producto correctamente"<<endl;
+	cout<<"\n";
+	cout<<"\tIngrese el Nombre del Producto : "; fflush(stdin); cin.getline(nomProducto,20,'\n');
+	cout<<"\tIngrese la cantidad existente : "; cin>>cantExiste;
+	cout<<"\tIngrese la categoria : "; fflush(stdin); cin.getline(categoria,20,'\n');
+	cout<<"\tIngrese el precio unitario : "; cin>>precioUnitario;
 	cout<<endl;
 }
 
