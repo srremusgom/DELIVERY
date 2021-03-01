@@ -2,6 +2,8 @@
 #define PEDIDO_H
 #include "clienteBasico.h"
 #include "Producto.h"
+class Servicios;
+class Producto;
 class Pedido
 {
 	protected:
@@ -9,12 +11,15 @@ class Pedido
 		clienteBasico* cliente=NULL;
 		char fecha[15];
 		Producto* producto[50];
+		Servicios* servicio[50];
 		int contProducts=0;
+		int contServices=0;
 	public:
 		//void realizarPedido();
 		void verPedido();
 		void designarCliente(clienteBasico*);
 		void agregarProducto(Producto*);
+		void agregarServicio(Servicios*);
 		//char* obtenerProducto();
 		void generarfecha();
 };

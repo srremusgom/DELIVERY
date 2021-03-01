@@ -2,7 +2,7 @@
 #define PRODUCTO_H
 #include "Proveedor.h"
 #include "Pedido.h"
-
+class Pedido;
 class Proveedor;
 class Producto{
     protected:
@@ -10,14 +10,17 @@ class Producto{
         int precioUnitario;
         char nomProducto[20];
         int cantExiste;
+        int numeropedidos;
+        int cantSolicitada;
         char categoria[20];
         Proveedor* proveedor=NULL;
         Pedido* pedidos[50];
     public:
         void agregaProducto();
         void modificarProducto();
-        void actualizarCantidad();
+        int actualizarStock();
         void verProducto();
         void asignarProveedor(Proveedor*);
+        void adicionarPedido(Pedido*);
 };
 #endif

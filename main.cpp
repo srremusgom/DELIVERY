@@ -16,10 +16,11 @@ int main() {
 	Producto listofproducts[100];
 	Proveedor listofsuppliers[50];
 	clienteBasico listofclients[50];
+	Servicios listofservices[50];
 	Pedido listoforders[50];
-	int nproducts=0,nsuppliers=0,nclients=0;
+	int nproducts=0,nsuppliers=0,nclients=0,norders=0,nservices=0,nP=0,nS=0;
 	int op_tipouser,opmenuA,opmenuB,op,orden=0,dato_modificar/*account*/;
-	char password[9],user[10];
+	char password[9],user[10],op_agregar;
 	char passwordreal[]="admin123";
 	bool check;
 	system("CLS");
@@ -167,25 +168,51 @@ int main() {
 							
 							int op_solicitar;
 							cout<<"\tMorly:¿Desea solicitar productos o servicios?";
-							cout<<"\t1.Solicitar producto"<<endl;
-							cout<<"\t2.Solicitar servicio"<<endl;
-							cout<<"\t3.Regresar"<<endl;
+							cout<<"\t1.Solicitar pedido de producto y/o servicio"<<endl;
+							cout<<"\t2.Regresar"<<endl;
 							cout<<"\tMorly:Digite su opcion";
 							cin>>op_solicitar;
 							
 							switch(op_solicitar){
 								case 1:
 									int ord;
-									//do{
+									do{
 										cout<<"\tMorly:Se mostrara la lista de productos disponibles a continuacion";
 										cout<<"\n"<<"\t"<<"Ingrese el orden del producto para asignarle a su pedido: ";
 						                cin>>ord;
-						                //listaFacturas[nFactu].adicionarProducto(&listaProductos[ord-1]);
-						                //listaProductos[ord-1].adicionarfactura(&listaFacturas[nFactu]);
-									//}
+						                listoforders[norders].agregarProducto(&listofproducts[ord-1]);
+						                listofproducts[ord-1].adicionarPedido(&listoforders[norders]);
+						                for(int i=0;i<nproducts;i++){
+						                	if(i==ord-1){
+						                		listofproducts[i].actualizarStock();
+											}
+										}
+										cout<<"\n\n"<<"\t"<<"Desea agregar otro producto al pedido actual[S/N]?"<<endl;
+                                    	cout<<"\n\n"<<"\t"<<"Ingrese su eleccion: ";cin>>op_agregar;
+                                    	nP++;
+									}while(nP<=100 && op_agregar!='N');	
 									
+									do{
+										cout<<"\tMorly:Se mostrara la lista de servicios disponibles a continuacion";
+										cout<<"\n"<<"\t"<<"Ingrese el orden del servicio para asignarle a su pedido: ";
+										cin>>ord;
+										listoforders[norders].agregarServicio(&listofservices[ord-1]);
+										listofservices[ord-1].adicionar_Pedido(&listoforders[norders]);
+										for(int i=0;i<nservices;i++){
+											if(i==ord-1){
+												listofservices[i].actualizarDisponibilidad();
+											}
+										}
+										cout<<"\n\n"<<"\t"<<"Desea agregar otro servicio al pedido actual[S/N]?"<<endl;
+                                    	cout<<"\n\n"<<"\t"<<"Ingrese su eleccion: ";cin>>op_agregar;
+                                    	nS++;
+									}while(nS<=20 && op_agregar!='N');
+																	
 									break;
+									
 								case 2:
+									
+									
 									break;
 							}	
 							

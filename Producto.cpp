@@ -53,3 +53,18 @@ void Producto::verProducto()
 void Producto::asignarProveedor(Proveedor *prove){
 	proveedor=prove;
 }
+
+void Producto::adicionarPedido(Pedido *pe){
+	pedidos[numeropedidos]=pe;
+	numeropedidos++;
+}
+
+int Producto::actualizarStock(){
+	cout<<"\n";
+    cout<<"\t"<<"Digite la cantidad de productos que necesita: ";
+    cin>>cantSolicitada;
+    if(cantSolicitada<=cantExiste){
+        cantExiste=cantExiste-cantSolicitada;
+    }
+    return cantExiste;
+}

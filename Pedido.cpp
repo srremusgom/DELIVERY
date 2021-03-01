@@ -9,3 +9,7 @@ void Pedido::agregarProducto(Producto *prod){
 	contProducts++;
 }
 
+void Pedido::agregarServicio(Servicios *serv){
+	servicio[contServices]=serv;
+	contServices++;
+}

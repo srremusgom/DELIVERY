@@ -44,3 +44,12 @@ void Servicios::verServicio(){
 		cout<<pagoServicio[i];
 	}
 }
+
+void Servicios::adicionar_Pedido(Pedido *p){
+	pedido[numpedidos]=p;
+	numpedidos++;
+}
+
+void Servicios::actualizarDisponibilidad(){
+	
+}
