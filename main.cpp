@@ -76,6 +76,11 @@ int main() {
 												//if(nsuppliers!=0){
 													do{
 														system("CLS");
+														for(int i=0;i<nsuppliers;i++){
+                                                			cout<<"\t"<<left<<setw(3)<<i+1;
+                                                			listofsuppliers[i].mostrarDatos();
+                                            			}
+														
 														cout<<"\n\n";
 														cout<<"\tMorly:Ingrese el orden del proveedor para asignarle";
 														cin>>orden;
@@ -119,7 +124,7 @@ int main() {
 										cout<<"\t3.Ver proveedores en la aplicacion";
 										cout<<"\t0.Salir del apartado proveedores";
 										cout<<"\tMorly:Ingrese una opcion..";
-										cin>>opmenuA;
+										cin>>opmenuB;
 										switch(opmenuB){
 											case 1:
 												listofsuppliers[nsuppliers].ingresarDatos();

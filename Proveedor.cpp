@@ -1,5 +1,6 @@
 #include "Proveedor.h"
 #include <iostream>
+#include <fstream>
 #include <iomanip>
 using namespace std;
 
@@ -28,6 +29,7 @@ void Proveedor::ingresarDatos(){
     fflush(stdin);
     gets(ruc);
     cout<<"\n";
+    nProveedores++;
     cout<<"\tMorly: El proveedor ha sido registrado con exito"<<endl;
 }
 
@@ -83,22 +85,30 @@ void Proveedor::modificarDatos(){
 		
 }
 
-void Proveedor::mostrarDatos(){
+void Proveedor::mostrarDatos(){	
 	
-	cout<<"\tMorly: Se ha ingresado a la seccion para ver los proveedores"<<endl;
-	cout<<"\n\t";
-    cout<<left;
+	ofstream archivo;
+	archivo.open("ListaProveedores.txt",ios::app);
+	archivo<<nombres<<" "<<apellidos<<" "<<nombreEmpresa<<" "<<telefono<<" "<<direccion<<" "<<ruc<<endl;
+             
+	archivo.close();
+	               
+	               
+	               
+	/*cout<<"\tMorly: Se ha ingresado a la seccion para ver los proveedores"<<endl;
+	cout<<"\n\t";  
+    cout<<left;    
 	cout<<setw(20)<<nombres;
 	cout<<setw(20)<<apellidos;
-    cout<<setw(20)<<nombreEmpresa;
-    cout<<setw(20)<<telefono;
-    cout<<setw(20)<<direccion;
+    cout<<setw(20)<0)<<nombreEmpresa;
+    cout<<setw(20)<0)<<telefono;
+    cout<<setw(20)<0)<<direccion;
 	cout<<setw(20)<<ruc;
-	cout<<endl;
-}
-
+	cout<<endl;*/  
+}                  
+                   
 void Proveedor::agregarProducto(Producto* p){
 	producto[nProductos]=p;
-	nProductos++;
-}
-
+	nProductos++;  
+}                  
+                   

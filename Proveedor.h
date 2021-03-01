@@ -12,6 +12,7 @@ class Proveedor:Usuario{
         char ruc[15];
         Producto* producto[50];
         int nProductos=0;
+        int nProveedores=0;
     public:
         void ingresarDatos();
         void mostrarDatos();
