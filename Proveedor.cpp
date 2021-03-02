@@ -93,18 +93,6 @@ void Proveedor::mostrarDatos(){
              
 	archivo.close();
 	               
-	               
-	               
-	/*cout<<"\tMorly: Se ha ingresado a la seccion para ver los proveedores"<<endl;
-	cout<<"\n\t";  
-    cout<<left;    
-	cout<<setw(20)<<nombres;
-	cout<<setw(20)<<apellidos;
-    cout<<setw(20)<0)<<nombreEmpresa;
-    cout<<setw(20)<0)<<telefono;
-    cout<<setw(20)<0)<<direccion;
-	cout<<setw(20)<<ruc;
-	cout<<endl;*/  
 }                  
                    
 void Proveedor::agregarProducto(Producto* p){

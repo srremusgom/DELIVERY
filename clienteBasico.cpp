@@ -82,14 +82,11 @@ void clienteBasico::modificarDatos(){
 }
 
 void clienteBasico::mostrarDatos(){
-    cout<<left;
-	cout<<setw(20)<<nombres;
-	cout<<setw(20)<<apellidos;
-    cout<<setw(20)<<telefono;
-    cout<<setw(20)<<edad;
-	cout<<setw(20)<<dni;
-    cout<<setw(20)<<direccion;
-	cout<<endl;	
+	ofstream archivo;
+	archivo.open("ListaCliente.txt",ios::app);
+	archivo<<nombres<<" "<<apellidos<<" "<<telefono<<" "<<dni<<" "<<direccion<<" "<<endl;
+             
+	archivo.close();
 }
 
 

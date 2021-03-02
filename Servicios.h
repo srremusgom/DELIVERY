@@ -17,4 +17,5 @@ class Servicios{
         void actualizarDisponibilidad();
 		void adicionar_Pedido(Pedido*);
 };
+
 #endif

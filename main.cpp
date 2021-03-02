@@ -13,11 +13,11 @@ using namespace std;
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
 int main() {
-	Producto listofproducts[100];
-	Proveedor listofsuppliers[50];
-	clienteBasico listofclients[50];
-	Servicios listofservices[50];
-	Pedido listoforders[50];
+	Producto listofproducts[100];//lista de productos
+	Proveedor listofsuppliers[50];//lista de proveedores
+	clienteBasico listofclients[50];//lista de clientes
+	Servicios listofservices[50];//lista de servicios
+	Pedido listoforders[50];//lista de pedidos
 	int nproducts=0,nsuppliers=0,nclients=0,norders=0,nservices=0,nP=0,nS=0;
 	int op_tipouser,opmenuA,opmenuB,op,orden=0,dato_modificar/*account*/;
 	char password[9],user[10],op_agregar;
@@ -73,7 +73,7 @@ int main() {
 											case 1:
 												system("CLS");
 												listofproducts[nproducts].agregaProducto();
-												//if(nsuppliers!=0){
+												if(nsuppliers!=0){
 													do{
 														system("CLS");
 														for(int i=0;i<nsuppliers;i++){
@@ -89,7 +89,10 @@ int main() {
 													listofsuppliers[orden-1].agregarProducto(&listofproducts[nproducts]);
 													nproducts++;
 													cout<<"\tMorly:El producto ha sido registrado con exito";
-												//}
+												}
+												else{
+													cout<<"NO HAY PROVEEDORES"<<endl;
+												}
 												break;
 											case 2:
 												//if(nproducts!=0){
@@ -118,12 +121,12 @@ int main() {
 									do{
 										system("CLS");
 										cout<<"\n\n";
-										cout<<"\tMorly:Se presentan las opciones posibles en el apartado de productos"<<endl;
-										cout<<"\t1.Registrar proveedor en la aplicacion";
-										cout<<"\t2.Modificar proveedor en la aplicacion";
-										cout<<"\t3.Ver proveedores en la aplicacion";
-										cout<<"\t0.Salir del apartado proveedores";
-										cout<<"\tMorly:Ingrese una opcion..";
+										cout<<"\tMorly:Se presentan las opciones posibles en el apartado de proveedores"<<endl;
+										cout<<"\t\t1.Registrar proveedor en la aplicacion"<<endl;
+										cout<<"\t\t2.Modificar proveedor en la aplicacion"<<endl;
+										cout<<"\t\t3.Ver proveedores en la aplicacion"<<endl;
+										cout<<"\t\t0.Salir del apartado proveedores"<<endl;
+										cout<<"\tMorly:Ingrese una opcion.."<<endl;
 										cin>>opmenuB;
 										switch(opmenuB){
 											case 1:
@@ -132,7 +135,7 @@ int main() {
 												system("PAUSE");
 												break;
 											case 2:
-												//if(nsuppliers!=0){
+												if(nsuppliers!=0){
 													do{
 														cout<<"\tMorly:Se mostrara los datos de los proveedores registrados hasta el momento";
 														cout<<"\tMorly:Ingrese el numero de orden del proveedor para modificar:";
@@ -140,7 +143,7 @@ int main() {
 													}while(nsuppliers<dato_modificar or dato_modificar==0);
 													listofsuppliers[dato_modificar-1].modificarDatos();
 													cout<<"\tMorly:El proveedor ha sido modificado con exito";
-												//}
+												}
 												break;
 											case 3:
 												//ver
