@@ -1,4 +1,5 @@
 #include "Pedido.h"
+using namespace std;
 
 void Pedido::designarCliente(clienteBasico *c){
     cliente=c;
@@ -15,9 +16,5 @@ void Pedido::agregarServicio(Servicios *serv){
 }
 
 void Pedido :: verPedido(){
-	ofstream archivo;
-	archivo.open("ListaPedido.txt",ios::app);
-	archivo<<codigo<<" "<<fecha<<" "<<producto<<" "<<servicio<<endl;
-             
-	archivo.close();
+	
 }

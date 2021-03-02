@@ -2,6 +2,7 @@
 #include <iostream>
 #include <string.h>
 #include <iomanip>
+#include <fstream>
 using namespace std;
 void Producto :: agregaProducto(){
 	cout<<"\n\n";
@@ -53,7 +54,7 @@ void Producto::verProducto()
 //	cout<<endl;
 	ofstream archivo;
 	archivo.open("ListaProductos.txt",ios::app);
-	archivo<<nomProducto<<" "<<numeropedidos<<" "<<categoria<<" "<<precioUnitari<<endl;
+	archivo<<nomProducto<<" "<<numeropedidos<<" "<<categoria<<" "<<precioUnitario<<endl;
              
 	archivo.close();
 }

@@ -1,6 +1,7 @@
 #include <iostream>
 #include "clienteBasico.h"
 #include "Usuario.h"
+#include <fstream>
 #include <string.h>
 #include <iomanip>
 using namespace std;
