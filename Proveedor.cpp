@@ -98,8 +98,4 @@ void Proveedor::agregarProducto(Producto* p){
 	nProductos++;  
 }                  
 
-void Proveedor::agregarServicio(Servicios *s){
-	serv[nServices]=s;
-	nServices++;
-}
                    

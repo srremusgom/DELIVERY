@@ -8,7 +8,6 @@ class Pedido{
 	protected:
 		int codigo=0;
 		clienteBasico* cliente=NULL;
-		char fecha[15];
 		Producto* producto[50];
 		int contProducts=0;//variable contabiliza productos ya n rapido :0
 		int dia;

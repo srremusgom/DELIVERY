@@ -165,7 +165,7 @@ int main() {
 												system("CLS");
 												if(nsuppliers!=0){
 													do{
-														cout<<"\tMorly:Se mostrara los datos de los proveedores registrados hasta el momento";
+														cout<<"\tMorly:Se mostrara los datos de los proveedores registrados hasta el momento"<<endl;
 														for(int i=0;i<nsuppliers;i++){	
 															listofsuppliers[i].mostrarDatos();
 														}
@@ -173,7 +173,7 @@ int main() {
 														cin>>dato_modificar;
 													}while(nsuppliers<dato_modificar or dato_modificar==0);
 													listofsuppliers[dato_modificar-1].modificarDatos();
-													cout<<"\tMorly:El proveedor ha sido modificado con exito";
+													cout<<"\tMorly:El proveedor ha sido modificado con exito"<<endl;
 												}
 												break;
 											case 3:
@@ -214,8 +214,8 @@ int main() {
 					cout<<"\n\n";
 					cout<<"\tMorly:Listo para hacer su pedido?"<<endl;
 					cout<<"\tMorly:Antes de realizar su pedido necesito saber si ya tiene una cuenta registrada en nuestra aplicacion"<<endl;
-					cout<<"Ingrese 1:Si, tengo una cuenta registrada"<<endl;
-					cout<<"Ingrese 2:No, recien me descargue la aplicacion"<<endl;
+					cout<<"\tIngrese 1:Si, tengo una cuenta registrada"<<endl;
+					cout<<"\tIngrese 2:No, recien me descargue la aplicacion"<<endl;
 					cin>>account;
 					switch(account){
 						case 1:			
