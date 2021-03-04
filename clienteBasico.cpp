@@ -94,5 +94,12 @@ void clienteBasico::mostrarDatos(){
 char* clienteBasico::getDNI(){
 	return dni;
 }
+
+char* clienteBasico::getName(){
+	return nombres;
+}
+char* clienteBasico::getApellido(){
+	return apellidos;
+}
 		
 

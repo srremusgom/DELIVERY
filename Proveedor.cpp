@@ -86,17 +86,20 @@ void Proveedor::modificarDatos(){
 }
 
 void Proveedor::mostrarDatos(){	
-	
-	ofstream archivo;
-	archivo.open("ListaProveedores.txt",ios::app);
-	archivo<<nombres<<" "<<apellidos<<" "<<nombreEmpresa<<" "<<telefono<<" "<<direccion<<" "<<ruc<<endl;
-             
-	archivo.close();
-	               
-}                  
+
+	ofstream archproveedores;
+	archproveedores.open("ListaProveedores.txt",ios::app);
+	archproveedores<<nombres<<" "<<apellidos<<" "<<nombreEmpresa<<" "<<telefono<<" "<<direccion<<" "<<ruc<<endl;
+	archproveedores.close();
+}            
                    
 void Proveedor::agregarProducto(Producto* p){
 	producto[nProductos]=p;
 	nProductos++;  
 }                  
+
+void Proveedor::agregarServicio(Servicios *s){
+	serv[nServices]=s;
+	nServices++;
+}
                    

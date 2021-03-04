@@ -43,21 +43,21 @@ void Producto :: modificarProducto(){
 		}
 }
 
+char* Producto::getnombre(){
+	return nomProducto;
+}
+
+
+
 void Producto::verProducto()
 {
-//	cout<<left;
-//	cout<<setw(20)<<codProducto;
-//	cout<<setw(20)<<precioUnitario;
-//    cout<<setw(20)<<nomProducto;
-//    cout<<setw(20)<<cantExiste;
-//    cout<<setw(20)<<categoria;
-//	cout<<endl;
-	ofstream archivo;
-	archivo.open("ListaProductos.txt",ios::app);
-	archivo<<nomProducto<<" "<<numeropedidos<<" "<<categoria<<" "<<precioUnitario<<endl;
-             
-	archivo.close();
+	ofstream archproductos;
+	archproductos.open("ListaProductos.txt",ios::app);
+	archproductos<<nomProducto<<" "<<cantExiste<<" "<<categoria<<" "<<precioUnitario<<endl;
+	archproductos.close();
 }
+
+
 
 void Producto::asignarProveedor(Proveedor *prove){
 	proveedor=prove;
@@ -76,4 +76,9 @@ int Producto::actualizarStock(){
         cantExiste=cantExiste-cantSolicitada;
     }
     return cantExiste;
+}
+
+float Producto::calcularPago(){
+    pago=cantSolicitada*precioUnitario;
+    return pago;
 }

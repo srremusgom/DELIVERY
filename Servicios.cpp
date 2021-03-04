@@ -2,6 +2,7 @@
 #include <iostream>
 #include <iomanip>
 #include <string.h>
+#include <fstream>
 using namespace std;
 
 
@@ -36,13 +37,21 @@ void Servicios::modificarServicio(){
 void Servicios::verServicio(){
 	cout<<"\tMorly: Se ha ingresado a la seccion para ver los servicios disponibles"<<endl;
 	cout<<"\n\t";
-    cout<<left;
+    /*cout<<left;
     cout<<setw(20)<<oficio;
 	cout<<endl;
 	for(int i=0;i<nServicios;i++){ 
 		cout<<nomServicio[i];
 		cout<<pagoServicio[i];
+	}*/
+	ofstream archivo;
+	archivo.open("ListaServicios.txt",ios::app);
+	archivo<<oficio<<" ";
+	for(int i=0;i<nServicios;i++){
+		archivo<<nomServicio[i]<<" "<<pagoServicio[i];
 	}
+             
+	archivo.close();
 }
 
 void Servicios::adicionar_Pedido(Pedido *p){
@@ -52,5 +61,9 @@ void Servicios::adicionar_Pedido(Pedido *p){
 
 void Servicios::actualizarDisponibilidad(){
 
+}
+
+void Servicios::asignarProvee(Proveedor* prov){
+	provee=prov;
 }
 

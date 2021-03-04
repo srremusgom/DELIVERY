@@ -15,5 +15,7 @@ class clienteBasico:Usuario
 		void modificarDatos();
         void mostrarDatos();
         char* getDNI();
+        char* getName();
+        char* getApellido();
 };
 #endif

@@ -4,23 +4,20 @@
 #include "Producto.h"
 class Servicios;
 class Producto;
-class Pedido
-{
+class Pedido{
 	protected:
-		int codigo;
+		int codigo=0;
 		clienteBasico* cliente=NULL;
 		char fecha[15];
 		Producto* producto[50];
-		Servicios* servicio[50];
-		int contProducts=0;
-		int contServices=0;
+		int contProducts=0;//variable contabiliza productos ya n rapido :0
+		int dia;
+		int mes;
+		int anio;
 	public:
-		//void realizarPedido();
 		void verPedido();
 		void designarCliente(clienteBasico*);
 		void agregarProducto(Producto*);
-		void agregarServicio(Servicios*);
-		//char* obtenerProducto();
 		void generarfecha();
 };
 
